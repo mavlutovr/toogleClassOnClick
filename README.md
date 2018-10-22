@@ -11,7 +11,7 @@
 1. В \<head\> добавляем код:
 
     ```html
-    <script type="text/javascript" src="https://raw.githubusercontent.com/mavlutovr/toogleClassOnClick/master/toggleClassOnClick.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/mavlutovr/toogleClassOnClick/master/toggleClassOnClick.js"></script>
     ```
 
 2. В кнопку добавляем следующее
@@ -25,7 +25,8 @@
 
     Где:
 
-    * **toggle-class:** класс, который подключает кнопку к элементу.
+    * **toggle-class:**
+    	этот класс просто превращает кнопку в переключатель, который ставит / убирает класс с элемента.
     * **data-target:** 
     	здесь ищем элемент, у которого будем ставить / убирать класс, так же как в css (поэтому у классов ставим точку).
     * **data-class:**
