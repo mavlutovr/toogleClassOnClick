@@ -83,34 +83,4 @@
 		}
 	});
 
-
-	// Listen for click events
-	false && document.addEventListener('click', function (event) {
-
-		// Make sure clicked element is our toggle
-		if (!event.target.classList.contains('toggle-class')) return;
-
-		// Prevent default link behavior
-		event.preventDefault();
-
-		// Target
-		var targetSearch = event.target.attributes['data-target'];
-		console.log('event.target.attributes', event.target.attributes);
-		if (targetSearch) {
-			var content = document.querySelector(targetSearch);
-			if (!content) return;
-
-			// Toggle the content
-			toggle(content);
-		}
-
-		// Get the content
-		var content = document.querySelector(event.target.hash);
-		if (!content) return;
-
-		// Toggle the content
-		toggle(content);
-
-	}, false);
-
 })();
