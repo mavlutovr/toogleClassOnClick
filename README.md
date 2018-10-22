@@ -9,7 +9,7 @@
 1. В \<head\> добавляем код:
 
     ```html
-    <script type="text/javascript" src="https://raw.githubusercontent.com/mavlutovr/toogleClassOnClick/master/openOnClick.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/mavlutovr/toogleClassOnClick/master/toggleClassOnClick.js"></script>
     ```
 
 2. В кнопку добавляем следующее
