@@ -44,27 +44,65 @@
 	};
 
 	// Toggle element visibility
-	var toggle = function (elem, timing) {
+	var toggle = function (element, cssClass) {
 
 		// If the element is visible, hide it
-		if (elem.classList.contains('is-visible')) {
-			hide(elem);
+		if (element.classList.contains(cssClass)) {
+			element.classList.remove(cssClass);
 			return;
 		}
 
 		// Otherwise, show it
-		show(elem);
+		element.classList.add(cssClass);
 
 	};
 
+
+	document.addEventListener('DOMContentLoaded', function(){
+		if((elements = document.getElementsByClassName("toggle-class")) !== null) {
+			var i;
+			for (i = 0; i < elements.length; i++) {
+				(function () {
+
+			    var element = elements[i];
+
+			    element.addEventListener('click', function () {
+			    	var dataset = element.dataset;
+
+			    	if (dataset.target) {
+			    		var content = document.querySelector(dataset.target);
+			    		if (!content) return;
+
+			    		// Toggle the content
+			    		toggle(content, dataset.class);
+			    	}
+			    });
+
+				})();
+			}
+		}
+	});
+
+
 	// Listen for click events
-	document.addEventListener('click', function (event) {
+	false && document.addEventListener('click', function (event) {
 
 		// Make sure clicked element is our toggle
-		if (!event.target.classList.contains('toggle')) return;
+		if (!event.target.classList.contains('toggle-class')) return;
 
 		// Prevent default link behavior
 		event.preventDefault();
+
+		// Target
+		var targetSearch = event.target.attributes['data-target'];
+		console.log('event.target.attributes', event.target.attributes);
+		if (targetSearch) {
+			var content = document.querySelector(targetSearch);
+			if (!content) return;
+
+			// Toggle the content
+			toggle(content);
+		}
 
 		// Get the content
 		var content = document.querySelector(event.target.hash);
@@ -75,4 +113,4 @@
 
 	}, false);
 
-});
+})();
