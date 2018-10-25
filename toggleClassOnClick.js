@@ -69,8 +69,8 @@
 			    element.addEventListener('click', function () {
 			    	var dataset = element.dataset;
 
-			    	if (dataset.target) {
-			    		var content = document.querySelector(dataset.target);
+			    	if (dataset.tag) {
+			    		var content = document.querySelector(dataset.tag);
 			    		if (!content) return;
 
 			    		// Toggle the content

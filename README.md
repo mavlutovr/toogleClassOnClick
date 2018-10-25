@@ -6,19 +6,26 @@
 
 ## Как пользоваться
 
-### Подключаем
+### 1. Подключаем
 
-1. В \<head\> добавляем код:
+1. Создаем папку **js**
+
+2. Скачиваем файл **toggleClassOnClick.js**
+    и помещаем его в папку **js**
+
+3. В \<head\> добавляем код:
 
     ```html
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/mavlutovr/toogleClassOnClick/master/toggleClassOnClick.js"></script>
+    <script type="text/javascript" src="js/toggleClassOnClick.js"></script>
     ```
 
-2. В кнопку добавляем следующее
+### 2. Настраиваем
+
+1. В кнопку добавляем следующее
 
     ```html
     <div class="toggle-class"
-         data-target=".top-menu" 
+         data-tag=".top-menu" 
          data-class="menu-visible"
          >Кнопка</div>
     ```
@@ -27,12 +34,12 @@
 
     * **toggle-class:**
     	этот класс просто превращает кнопку в переключатель, который ставит / убирает класс с элемента.
-    * **data-target:** 
-    	здесь ищем элемент, у которого будем ставить / убирать класс, так же как в css (поэтому у классов ставим точку).
+    * **data-tag:** 
+    	здесь ищем тег, у которого будем ставить / убирать класс, так же как в css (поэтому у классов ставим точку).
     * **data-class:**
     	какой класс ставить / убирать.
 
-3. В элемент, у когорого меняем класс добавляем класс, который указали у кнопки в data-target
+2. В элемент, у когорого меняем класс добавляем класс, который указали у кнопки в data-tag
 
     ```html
     <div class="top-menu">
