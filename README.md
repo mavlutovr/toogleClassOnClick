@@ -25,7 +25,7 @@
 
     ```html
     <div class="toggle-class"
-         data-tag=".top-menu" 
+         data-tag=".header-menu" 
          data-class="menu-visible"
          >Кнопка</div>
     ```
